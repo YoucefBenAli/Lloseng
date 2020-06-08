@@ -41,17 +41,16 @@ public class ClientConsole implements ChatIF
    * @param host The host to connect to.
    * @param port The port to connect on.
    */
-  public ClientConsole(String host, int port)
+  public ClientConsole(String host, int port, String id)
   {
     try
     {
-      client= new ChatClient(host, port, this);
+      client= new ChatClient(host, port,this, id);
     }
     catch(IOException exception)
     {
-      System.out.println("Error: Can't setup connection!"
-                + " Terminating client.");
-      System.exit(1);
+      System.out.println("Error: Can't setup connection!");
+      accept();
     }
   }
 
@@ -69,11 +68,15 @@ public class ClientConsole implements ChatIF
       BufferedReader fromConsole =
         new BufferedReader(new InputStreamReader(System.in));
       String message;
-
       while (true)
       {
         message = fromConsole.readLine();
-        client.handleMessageFromClientUI(message);
+        if (message.length() != 0 && message.charAt(0) ==  '#'){
+            handleCommands(message);
+        }
+        else if (client != null && client.isConnected()){
+            client.handleMessageFromClientUI(message);
+        }
       }
     }
     catch (Exception ex)
@@ -83,10 +86,56 @@ public class ClientConsole implements ChatIF
     }
   }
 
-  protected void connectionClosed() {
-      System.out.println("Connection has been terminated");
+  public void handleCommands(String message){
+      message = message.substring(1);
+      if (message.toLowerCase().equals("quit")){
+          client.quit();
+      }
+      else if (message.toLowerCase().equals("logoff")){
+          try {
+              System.out.println("Connection closed");
+              client.closeConnection();
+          }
+          catch(IOException e) {}
+      }
 
-    }
+      else if (message.toLowerCase().split(" ")[0].equals("sethost")){
+          client.setHost(message.toLowerCase().split(" ")[1]);
+          System.out.println("Host has been set to: " + client.getHost());
+      }
+
+      else if (message.toLowerCase().split(" ")[0].equals("setport")){
+          client.setPort(Integer.parseInt(message.toLowerCase().split(" ")[1]));
+          System.out.println("Port has been set to: " + client.getPort());
+      }
+
+      else if(message.toLowerCase().equals("login")){
+          if (client.isConnected()) {
+              System.out.println("Error: Already connected");
+          }
+          else{
+              try{
+                  client.openConnection();
+              }
+              catch(IOException e) {
+                  System.out.println("Could not log in");
+              }
+          }
+      }
+
+      else if(message.toLowerCase().equals("gethost")){
+          System.out.println("Host is currently set to: " + client.getHost());
+      }
+
+      else if(message.toLowerCase().equals("getport")){
+          System.out.println("Port is currently set to: " + client.getPort());
+      }
+      else{
+          System.out.println("Unknown command.");
+      }
+
+  }
+
 
 
 
@@ -98,8 +147,28 @@ public class ClientConsole implements ChatIF
    */
   public void display(String message)
   {
-    System.out.println("> " + message);
+      if (message.length()>=12 && message.substring(0,12).equals("SERVER MSG> ")){
+          System.out.println(message);
+      }
+      else{
+          System.out.println("> " + message);
+      }
   }
+
+  protected void connectionClosed() {
+      System.out.println("Connection closed");
+      client.quit();
+  }
+
+  protected void connectionException(){
+      System.out.println("Connection exception");
+      client.quit();
+  }
+
+  protected void connectionEstablished() {
+      System.out.println("Connection established");
+	}
+
 
 
   //Class methods ***************************************************
@@ -113,16 +182,25 @@ public class ClientConsole implements ChatIF
   {
     String host = "";
     int port = 0;  //The port number
+    String id = "";
+
+    try{
+        id = args[0];
+    }
+    catch(ArrayIndexOutOfBoundsException e){}
 
     try
     {
-      host = args[0];
+      port = Integer.parseInt(args[2]);
+      host = (String) args[1];
     }
     catch(ArrayIndexOutOfBoundsException e)
     {
       host = "localhost";
+      port = DEFAULT_PORT;
     }
-    ClientConsole chat= new ClientConsole(host, DEFAULT_PORT);
+
+    ClientConsole chat= new ClientConsole(host, port, id);
     chat.accept();  //Wait for console data
   }
 }
