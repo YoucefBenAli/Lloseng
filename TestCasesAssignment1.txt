@@ -1,0 +1,281 @@
+Youcef Ben Ali
+300110797
+ybena102@uottawa.ca
+
+--------------------------------------------SERVER--------------------------------------
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. EchoServer
+Server listening for connections on port 5555
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. EchoServer
+Server listening for connections on port 5555
+Client: null is attempting to connect to the server
+Message received: #login ThisIsMyId from null
+SERVER MSG> thisismyid has joined the server
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. EchoServer
+Server listening for connections on port 5555
+Client: null is attempting to connect to the server
+Message received: #login ThisIsMyId from null
+SERVER MSG> thisismyid has joined the server
+Message received: Typing stuff for test case 2005 from thisismyid
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. EchoServer
+Server listening for connections on port 5555
+Client: null is attempting to connect to the server
+Message received: #login ThisIsMyId from null
+SERVER MSG> thisismyid has joined the server
+Client: null is attempting to connect to the server
+Message received: #login Client2 from null
+SERVER MSG> client2 has joined the server
+Message received: Testcase 2006 from client2
+Yes this is test case 2006
+SERVER MSG> Yes this is test case 2006
+#quit
+Server has stopped listening for connections.
+Client: thisismyid has disconnected from the server
+Client: client2 has disconnected from the server
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. EchoServer
+Server listening for connections on port 5555
+#stop
+Server has stopped listening for connections.
+#start
+Server listening for connections on port 5555
+Client: null is attempting to connect to the server
+Message received: #login ThisIsMyId from null
+SERVER MSG> thisismyid has joined the server
+#stop
+Server has stopped listening for connections.
+Message received: Hey am I alone :( from thisismyid
+#start
+Server listening for connections on port 5555
+Client: null is attempting to connect to the server
+Message received: #login Boring from null
+SERVER MSG> boring has joined the server
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. EchoServer
+Server listening for connections on port 5555
+Client: null is attempting to connect to the server
+Message received: #login ThisIsMyId from null
+SERVER MSG> thisismyid has joined the server
+#stop
+Server has stopped listening for connections.
+#close
+Client: thisismyid has disconnected from the server
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. EchoServer
+Server listening for connections on port 5555
+Client: null is attempting to connect to the server
+Message received: #login ThisIsMyId from null
+SERVER MSG> thisismyid has joined the server
+#close
+Server has stopped listening for connections.
+Client: thisismyid has disconnected from the server
+#start
+Server listening for connections on port 5555
+Client: null is attempting to connect to the server
+Message received: Hey from null
+Client: null has disconnected from the server
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. EchoServer
+Server listening for connections on port 5555
+Client: null is attempting to connect to the server
+Message received: #login ThisIsMyId from null
+SERVER MSG> thisismyid has joined the server
+Client: thisismyid has disconnected from the server
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>javac -classpath ../../code *.java client/*.java common/*.java
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. EchoServer
+Server listening for connections on port 5555
+Client: null is attempting to connect to the server
+Message received: #login ThisIsMyId from null
+SERVER MSG> thisismyid has joined the server
+Client: thisismyid has disconnected from the server
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. EchoServer 1234
+Server listening for connections on port 1234
+Client: null is attempting to connect to the server
+Message received: #login ThisIsMyId from null
+SERVER MSG> thisismyid has joined the server
+Client: thisismyid has disconnected from the server
+
+
+
+
+
+----------------------------------------------CLIENT 1-----------------------------------------
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. ClientConsole
+ERROR - No login ID specified.  Connection aborted.
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. ClientConsole ThisIsMyId
+Error: Can't setup connection!
+#quit
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. ClientConsole ThisIsMyId
+SERVER MSG> thisismyid has joined the server
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. ClientConsole ThisIsMyId
+SERVER MSG> thisismyid has joined the server
+Typing stuff for test case 2005
+> thisismyid: Typing stuff for test case 2005
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. ClientConsole ThisIsMyId
+SERVER MSG> thisismyid has joined the server
+SERVER MSG> client2 has joined the server
+> client2: Testcase 2006
+SERVER MSG> Yes this is test case 2006
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. ClientConsole ThisIsMyId
+SERVER MSG> thisismyid has joined the server
+SERVER MSG> WARNING - Server has stopped listening for connections.
+Hey am I alone :(
+> thisismyid: Hey am I alone :(
+SERVER MSG> boring has joined the server
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. ClientConsole ThisIsMyId
+SERVER MSG> thisismyid has joined the server
+SERVER MSG> WARNING - Server has stopped listening for connections.
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. ClientConsole ThisIsMyId
+SERVER MSG> thisismyid has joined the server
+#login
+Hey
+> null: Hey
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. ClientConsole ThisIsMyId
+Error: Can't setup connection!
+#quit
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. ClientConsole ThisIsMyId
+SERVER MSG> thisismyid has joined the server
+#logoff
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. ClientConsole ThisIsMyId
+SERVER MSG> thisismyid has joined the server
+#logoff
+Connection closed
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. ClientConsole ThisIsMyId
+Error: Can't setup connection!
+#sethost localhost
+Host has been set to: localhost
+#setport 1234
+Port has been set to: 1234
+#quit
+Connection closed
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. ClientConsole ThisIsMyId localhost 1234
+SERVER MSG> thisismyid has joined the server
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>
+
+------------------------------------------------CLIENT 2-------------------------------------
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. ClientConsole Client2
+SERVER MSG> client2 has joined the server
+Testcase 2006
+> client2: Testcase 2006
+SERVER MSG> Yes this is test case 2006
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>java -classpath ..\..\code;. ClientConsole Boring
+SERVER MSG> boring has joined the server
+Unexpected error while reading from console!
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>
+
+----------------------------------------Git----------------------------------------------------
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>git status
+On branch OscfPhase2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ../ocsf/client/AbstractClient.java
+        modified:   ../ocsf/server/AbstractServer.java
+        modified:   ../ocsf/server/ConnectionToClient.java
+        modified:   ClientConsole.java
+        modified:   EchoServer.java
+        modified:   client/ChatClient.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ServerConsole.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>git add .
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>git add ClientConsole.java
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>git add EchoServer.java
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>git add client/ChatClient.java
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>git restore../ocsf/client/AbstractClient.java
+git: 'restore../ocsf/client/AbstractClient.java' is not a git command. See 'git --help'.
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>git restore ../ocsf/client/AbstractClient.java
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>git restore ../ocsf/server/AbstractServer.java
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>git restore ../ocsf/server/ConnectionToClient.java
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>git status
+On branch OscfPhase2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   ClientConsole.java
+        modified:   EchoServer.java
+        new file:   ServerConsole.java
+        modified:   client/ChatClient.java
+
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>git commit -m "Finished assignment 1"
+[OscfPhase2 223db3a] Finished assignment 1
+ 4 files changed, 281 insertions(+), 52 deletions(-)
+ create mode 100644 code/simplechat1/ServerConsole.java
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>git push
+fatal: The current branch OscfPhase2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin OscfPhase2
+
+
+C:\Users\18192\Documents\Software Engineering - Year 1\Summer - Year 1\SEG2105\Assignments\Lloseng\code\simplechat1>git push --set-upstream origin OscfPhase2
+Enter passphrase for key '/c/Users/18192/.ssh/id_rsa':
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (14/14), 3.69 KiB | 944.00 KiB/s, done.
+Total 14 (delta 10), reused 0 (delta 0)
+remote: Resolving deltas: 100% (10/10), completed with 6 local objects.
+remote:
+remote: Create a pull request for 'OscfPhase2' on GitHub by visiting:
+remote:      https://github.com/YoucefBenAli/Lloseng/pull/new/OscfPhase2
+remote:
+To github.com:YoucefBenAli/Lloseng.git
+ * [new branch]      OscfPhase2 -> OscfPhase2
+Branch 'OscfPhase2' set up to track remote branch 'OscfPhase2' from 'origin'.
