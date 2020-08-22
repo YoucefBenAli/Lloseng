@@ -1,6 +1,6 @@
 // This file contains material supporting section 3.7 of the textbook:
 // "Object Oriented Software Engineering" and is issued under the open-source
-// license found at www.lloseng.com 
+// license found at www.lloseng.com
 
 package client;
 
@@ -20,16 +20,18 @@ import java.io.*;
 public class ChatClient extends AbstractClient
 {
   //Instance variables **********************************************
-  
+
   /**
-   * The interface type variable.  It allows the implementation of 
+   * The interface type variable.  It allows the implementation of
    * the display method in the client.
    */
-  ChatIF clientUI; 
+  ChatIF clientUI;
 
-  
+  String ID;
+
+
   //Constructors ****************************************************
-  
+
   /**
    * Constructs an instance of the chat client.
    *
@@ -37,32 +39,44 @@ public class ChatClient extends AbstractClient
    * @param port The port number to connect on.
    * @param clientUI The interface type variable.
    */
-  
-  public ChatClient(String host, int port, ChatIF clientUI) 
-    throws IOException 
+
+  public ChatClient(String host, int port, ChatIF clientUI, String ID)
+    throws IOException
   {
     super(host, port); //Call the superclass constructor
+    this.ID = ID;
     this.clientUI = clientUI;
-    openConnection();
+    if (ID.equals("")){
+        System.out.println("ERROR - No login ID specified.  Connection aborted.");
+    }
+    else{
+        try{
+            openConnection();
+            handleMessageFromClientUI("#login " + ID);
+        }
+        catch(Exception e){
+            System.out.println("Error: Can't setup connection!");
+        }
+    }
   }
 
-  
+
   //Instance methods ************************************************
-    
+
   /**
    * This method handles all data that comes in from the server.
    *
    * @param msg The message from the server.
    */
-  public void handleMessageFromServer(Object msg) 
+  public void handleMessageFromServer(Object msg)
   {
     clientUI.display(msg.toString());
   }
 
   /**
-   * This method handles all data coming from the UI            
+   * This method handles all data coming from the UI
    *
-   * @param message The message from the UI.    
+   * @param message The message from the UI.
    */
   public void handleMessageFromClientUI(String message)
   {
@@ -77,7 +91,7 @@ public class ChatClient extends AbstractClient
       quit();
     }
   }
-  
+
   /**
    * This method terminates the client.
    */
@@ -86,6 +100,7 @@ public class ChatClient extends AbstractClient
     try
     {
       closeConnection();
+      System.out.println("Connection closed");
     }
     catch(IOException e) {}
     System.exit(0);
